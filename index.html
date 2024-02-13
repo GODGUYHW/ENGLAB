@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                background-color: #273A48;}
+            .Sign-info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family:Arial,sans-serif;
+
+            }
+            h1{
+                color: #ffffff;
+            }
+            label{
+                position: absolute;
+                font-size: 13px;
+                padding: 12.5px;
+                left: 0px;
+                color: white;
+                transition: .2s;
+                margin-top: auto;
+                margin-bottom: auto;
+                
+            }
+            .button-info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 120px;
+                font-style: bold;
+            }
+            button{
+                padding: 5px;
+                cursor: pointer;
+                color: #273A48;
+                border-radius: 10px;
+                border: 10px solid #B4C4DB ;
+                background-color: #B4C4DB;
+            }
+            
+            button:hover{
+                border: 10px solid #2D3250;
+                color:white;
+                background-color: #2D3250;
+            }
+            .boder-div{
+                border-radius: 10px;
+                height: 400px;
+                width: 380px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px 40px;
+                background-color: #4A5B6B;
+            }ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                height: 80px;
+            }
+            li{
+                text-align: center;
+                font-family:sans-serif;
+
+            }
+            li a{  
+                display: block;
+                color: white;
+                text-decoration: none;
+                cursor: pointer;
+                padding: 4px;
+            }
+            li a:hover {
+                color: #B4C4DB;
+            }
+            .checkbox{
+                display: block;
+                position: relative;
+                cursor: pointer;
+                width: 120px;
+                margin-left: 0px;
+                padding-left: 15px;
+                user-select: none;
+            }
+            .checkbox input{
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+            .checkmark{
+                position: absolute;
+                top: 3.5px;
+                left: 0;
+                height: 12px;
+                width: 12px;
+                border-radius: 2px;
+                background-color: #eee;
+            }
+            .checkbox:hover input~ .checkmark{
+                background-color: #B4C4DB;
+            }
+            .checkbox input:checked ~ .checkmark {
+                background-color: #2D3250;
+            }
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+            .checkbox input:checked ~ .checkmark:after {
+                display: block;
+            }
+            .checkbox .checkmark:after {
+                left: 4px;
+                top: 1px;
+                width: 2.5px;
+                height: 5.5px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            input[type="text"],
+            input[type="password"]{
+                padding: 12px 17px;
+                border: 2px solid #2D3250;
+                width: 90%;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                outline: none;
+                background-color: transparent;
+                color: white;
+            }
+            .form_wrapper{
+                display: flex;
+                align-items: center;    
+            }
+            input :valid+label,
+            input:focus+label{
+                color: black;
+                transform: translate(5px, 2px);
+                padding: 2px 5px;
+                font-size: 8px;
+                font-family:Arial,sans-serif;
+                font-weight: bold;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                font-family:sans-serif;
+            }
+            .checkbox{
+                margin-top: -13px;
+                margin-left: 6px;
+                padding: 3px 15px;
+            }
+            .name{
+                font-size: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <title>
+            Sign in
+        </title>
+        <div class="boder-div">
+            <div class="Sign-info">
+                <h1>Sign in</h1>
+            </div>
+                <form>
+                    <div class="form-wrapper">
+                        <input type="text" id="input" >
+                        <label for="name">USERNAME</label>
+                    </div>
+                    <div class="form-wrapper">
+                        <input type="password"  id="password">
+                        <label for="Password">PASSWORD</label>
+                    </div>
+                        <label class="checkbox">Stay signed in
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                    <div class="button-info">
+                        <button >LOG IN</button>
+                    </div>
+                        <ul>
+                            <li><a href="CAN'T SIGN IN?">CAN'T SIGN IN?</a></li>
+                            <li><a href="Create account">CREATE ACCOUNT</a></li>
+                        </ul>
+                </form>  
+                
+                
+        </div>
+    </body>
+</html>
